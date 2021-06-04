@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Jumbotron } from "react-bootstrap";
+import NavbarTop from "components/navbar/NavbarTop";
 
 class About extends Component {
   render() {
     return (
       <Fragment>
+        <NavbarTop />
         <Jumbotron fluid>
           <Container>
             <h1>Hello this is React Js</h1>

@@ -22,16 +22,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact render={(props) => <Home {...props} />} />
-      <Route
-        path="/landing-page"
-        exact
-        render={(props) => <About {...props} />}
-      />
-      <Route
-        path="/login-page"
-        exact
-        render={(props) => <Contact {...props} />}
-      />
+      <Route path="/about" exact render={(props) => <About {...props} />} />
+      <Route path="/contact" exact render={(props) => <Contact {...props} />} />
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
