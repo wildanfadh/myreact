@@ -1,0 +1,13 @@
+.navlink {
+  color: rgb(196, 199, 199) !important;
+  margin-right: 7px;
+  text-decoration: none !important;
+}
+
+.navlink:hover {
+  color: azure !important;
+}
+
+.navlink:focus {
+  color: azure !important;
+}

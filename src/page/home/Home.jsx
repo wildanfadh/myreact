@@ -1,0 +1,38 @@
+import React, { Component, Fragment } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Jumbotron } from "react-bootstrap";
+// import Loader from "react-loader-spinner";
+
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loader: undefined,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      loader: true,
+    });
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <Jumbotron fluid>
+          <Container>
+            <h1>Hello this is React Js</h1>
+            <h2>This is Home Page</h2>
+            <p>
+              This is a modified jumbotron that occupies the entire horizontal
+              space of its parent.
+            </p>
+          </Container>
+        </Jumbotron>
+      </Fragment>
+    );
+  }
+}
+
+export default Home;
