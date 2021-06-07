@@ -18,14 +18,16 @@ function DefaultFooter() {
                 <a
                   href="https://www.creative-tim.com?ref=nukr-default-footer"
                   target="_blank"
+                  onClick={(e) => e.preventDefault()}
                 >
-                  Creative Tim
+                  React Tim
                 </a>
               </li>
               <li>
                 <a
                   href="http://presentation.creative-tim.com?ref=nukr-default-footer"
                   target="_blank"
+                  onClick={(e) => e.preventDefault()}
                 >
                   About Us
                 </a>
@@ -34,6 +36,7 @@ function DefaultFooter() {
                 <a
                   href="http://blog.creative-tim.com?ref=nukr-default-footer"
                   target="_blank"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Blog
                 </a>
@@ -45,15 +48,17 @@ function DefaultFooter() {
             <a
               href="https://www.invisionapp.com?ref=nukr-default-footer"
               target="_blank"
+              onClick={(e) => e.preventDefault()}
             >
-              Invision
+              Wildan
             </a>
             . Coded by{" "}
             <a
               href="https://www.creative-tim.com?ref=nukr-default-footer"
               target="_blank"
+              onClick={(e) => e.preventDefault()}
             >
-              Creative Tim
+              React Tim
             </a>
             .
           </div>

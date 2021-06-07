@@ -1,79 +1,42 @@
 import React from "react";
 import "./NavbarTop.css";
 import { Link } from "react-router-dom";
-
-// reactstrap components
-import {
-  UncontrolledCollapse,
-  // DropdownToggle,
-  // DropdownMenu,
-  // DropdownItem,
-  // UncontrolledDropdown,
-  FormGroup,
-  Form,
-  Input,
-  // InputGroupAddon,
-  // InputGroupText,
-  // InputGroup,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-} from "reactstrap";
-// core components
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
 function NavbarTop() {
   return (
     <>
-      <Navbar className="bg-primary" expand="lg">
+      <Navbar bg="primary" expand="lg" sticky="top">
         <Container>
-          <button
-            className="navbar-toggler"
-            id="navbarTogglerDemo01"
-            type="button"
-          >
-            <span className="navbar-toggler-bar bar1"></span>
-            <span className="navbar-toggler-bar bar2"></span>
-            <span className="navbar-toggler-bar bar3"></span>
-          </button>
-          <UncontrolledCollapse navbar toggler="#navbarTogglerDemo01">
-            <NavbarBrand href="" onClick={(e) => e.preventDefault()}>
-              React App
-            </NavbarBrand>
-            <Nav className="mr-auto mt-2 mt-lg-0" navbar>
-              <NavItem>
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link className="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className="disabled"
-                  href=""
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Disabled
-                </NavLink>
-              </NavItem>
+          <Navbar.Brand href="#">React App</Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="mr-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Link className="nav-link" to="/" href="#action1">
+                Home
+              </Link>
+              <Link className="nav-link" to="/about" href="#action2">
+                About
+              </Link>
+              <NavDropdown title="Link" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Something else here
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Link className="nav-link" to="/contact" href="#">
+                Contact
+              </Link>
             </Nav>
-            <Form className="form-inline ml-auto" data-background-color="">
-              <FormGroup className="has-white">
-                <Input placeholder="Cari" type="text"></Input>
-              </FormGroup>
-            </Form>
-          </UncontrolledCollapse>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Jumbotron } from "react-bootstrap";
 import NavbarTop from "components/navbar/NavbarTop";
+import DefaultFooter from "components/footer/Footer";
 
 class Contact extends Component {
   render() {
@@ -18,6 +19,7 @@ class Contact extends Component {
             </p>
           </Container>
         </Jumbotron>
+        <DefaultFooter />
       </Fragment>
     );
   }

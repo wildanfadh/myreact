@@ -4,6 +4,7 @@ import { Container, Jumbotron } from "react-bootstrap";
 import NavbarTop from "components/navbar/NavbarTop";
 import DataTable from "react-data-table-component";
 import DefaultFooter from "components/footer/Footer";
+import axios from "axios";
 // import Loader from "react-loader-spinner";
 
 const data = [
@@ -11,6 +12,12 @@ const data = [
   { id: 2, title: "Conan the Barbarian", year: "1982" },
   { id: 3, title: "Conan the Barbarian", year: "1982" },
 ];
+// var data = "";
+// axios.get(`http://localhost:8080/api/post`).then((res) => {
+//   console.log(res.data.data);
+//   data = res.data.data;
+// });
+
 const columns = [
   {
     name: "Title",
@@ -18,8 +25,8 @@ const columns = [
     sortable: true,
   },
   {
-    name: "Year",
-    selector: "year",
+    name: "Content",
+    selector: "content",
     sortable: true,
     right: true,
   },
@@ -29,13 +36,16 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loader: undefined,
+      // loader: undefined,
+      post: [],
     };
   }
 
   componentDidMount() {
-    this.setState({
-      loader: true,
+    axios.get(`http://localhost:8080/api/post`).then((res) => {
+      console.log(res.data.data);
+      // const post = res.data.data;
+      // this.setState({ post });
     });
   }
 
@@ -54,7 +64,7 @@ class Home extends Component {
           </Container>
         </Jumbotron>
         <Container>
-          <DataTable title="Arnold Movies" columns={columns} data={data} />
+          <DataTable title="API List" columns={columns} data={data} />
         </Container>
         <DefaultFooter />
       </Fragment>

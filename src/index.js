@@ -4,11 +4,15 @@ import ReactDOM from "react-dom";
 // import App from "./App";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+
 // styles
 import "assets/css/bootstrap.min.css";
 import "assets/css/now-ui-kit.css";
-// import "assets/css/now-ui-kit.min.css";
-// import "assets/css/now-ui-kit.css.map";
+import "assets/css/now-ui-kit.min.css";
+import "assets/css/now-ui-kit.css.map";
 import "assets/demo/demo.css";
 
 // import Index from "views/Index.js";
