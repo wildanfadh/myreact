@@ -1,39 +1,25 @@
+// library
 import React from "react";
 import ReactDOM from "react-dom";
-// import "./index.css";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+// page
 // import App from "./App";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import RouterApp from "container/router/Router";
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
-
-// styles
+// style
+import "bootstrap/dist/css/bootstrap.min.css";
 import "assets/css/bootstrap.min.css";
 import "assets/css/now-ui-kit.css";
 import "assets/css/now-ui-kit.min.css";
 import "assets/css/now-ui-kit.css.map";
 import "assets/demo/demo.css";
 
-// import Index from "views/Index.js";
-
-import reportWebVitals from "./reportWebVitals";
-import Home from "./page/home/Home";
-import About from "./page/about/About";
-import Contact from "./page/contact/Contact";
-
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/" exact render={(props) => <Home {...props} />} />
-      <Route path="/about" exact render={(props) => <About {...props} />} />
-      <Route path="/contact" exact render={(props) => <Contact {...props} />} />
-      <Redirect to="/" />
-    </Switch>
-  </BrowserRouter>,
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
+  <React.Fragment>
+    <RouterApp />
+  </React.Fragment>,
   document.getElementById("root")
 );
 
