@@ -2,3 +2,39 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.service-section h2 {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 900;
+}
+
+.web-dev-section h2 {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 900;
+}
+
+.web-dev-img img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.design-section {
+  padding: 50px;
+  max-height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: url(../../../assets/img/home/bg-design.jpg);
+}
+
+.design-section h2 {
+  color: rgb(42, 170, 255) !important;
+  font-weight: 900;
+}
+
+.design-section p {
+  color: rgb(42, 170, 255);
+}
+
+.design-img img {
+  width: 65%;
+  height: 100%;
+  box-shadow: rgba(42, 170, 255, 0.5) 0px 5px 15px;
+}
